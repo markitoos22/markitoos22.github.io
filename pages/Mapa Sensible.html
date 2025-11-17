@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mapa Sensible </title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            color: black;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+            display: flex;
+            margin: auto;
+        }
+        h1{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa Sensible</h1>
+        <img src="../src/img/mapa.webp" alt="Imagen de mapa" usemap="#primerMapa"> 
+            <map name="primerMapa">
+            <area shape="rect" coords="103,157,182,464" alt="Portugal" href="https://www.visitportugal.com/es" title="Portugal">
+            <area shape="rect" coords="247,119,553,496" alt="Españita" href="https://sede.agenciatributaria.gob.es/" title="España">
+            <area shape="circle" coords="587,54,60" alt="Francia" href="https://www.diplomatie.gouv.fr/es/" title="Francia">
+            <area shape="poly" coords="665,311,695,285,711,298,721,297,702,329,682,310" alt="Mallorca" href="https://www.mallorca.es/es/" title="Mallorca">
+            </map>
+</body>
+</html> 

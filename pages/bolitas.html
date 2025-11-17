@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio de DIV </title>
+      <meta name="Author" content="Marcos">
+    <meta name="Description" content=" Ejercicios de divs">
+    <meta name="Keywords" content="HTML, CSS">
+    <link rel="shortcut icon" href="../src/iconos/iconbolitas.png"  type="image/x-icon">
+    <style>
+        /*matenme ya*/
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .div-top{
+            background-color: red;
+            height: 10vh;
+            width: 50vw;
+            border-radius: 10%;
+            text-align:center;
+            font-size: 25px;
+            color: white;
+            margin: auto;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        /*las bolas dan asco*/
+        .bolitas{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .bleft{
+            background-color: lightgreen;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 2px darkgreen dashed;
+            float: left;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .bcenter{
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 2px darkblue dashed;
+            margin: auto;
+        }
+        .bright{
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 2px darkorange dashed;
+            float: right;
+            margin: auto;
+        }
+        .cuadritos{
+            display: flex;
+        }
+        .cleft{
+            background-color: violet;
+            height: 30vh;
+            width: 30vw;
+            border: 2px;
+            float: left;
+            margin: auto;
+
+        }
+        .cright{
+            background-color: brown;
+            height: 30vh;
+            width: 30vw;
+            border: 2px;
+            float: right;
+            margin: auto;
+        }
+        .div-bottom{
+            background-color:blue;
+            height: 20vh;
+            width: 100vw;
+            border: 2px black groove;
+            margin: auto;
+            float:inline-start;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>  
+ <div class="div-top">
+    <marquee> <h1> Ejercicio de Mierda </h1> </marquee>
+ </div>
+ <div> <marquee> Ojala Carvajal fuera rey de España </marquee></div>
+ <!--Me esta dando depresión-->
+ <div class="bolitas">
+    <div class="bleft"> </div>
+    <div class="bcenter"> </div>
+    <div class="bright"> </div>
+ </div>
+ <div class="cuadritos">
+    <div class="cleft"> </div>
+    <div class="cright"> </div>
+ </div>
+ <div class="div-bottom"> </div> 
+ <!--No quiero volver a hacer esto-->
+</body>
+</html>
