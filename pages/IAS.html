@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de IAs Avanzadas</title>
+    <meta name="Author" content="Marcos">
+    <meta name="Description" content=" Catálogo de IAs Avanzadas ">
+    <meta name="Keywords" content="HTML, CSS">
+    <link rel="shortcut icon" href="../src/img/ia.png"  type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/ia.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"> <img src="../src/img/ias.jpeg" alt=""></div>
+    <h1 class="titulo"> Catálogo de IAs Avanzadas </h1>
+    <div class="sociales">
+      <a href="https://www.facebook.com/Cristiano/?utm_source=chatgpt.com">Facebook</a>
+      <a href="https://www.instagram.com/cristiano/?utm_source=chatgpt.com">Instagram</a>
+      <a href="https://x.com/Cristiano?utm_source=chatgpt.com">Twitter</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li>Sora</li>
+      <li>Suno AI</li>
+      <li>PixVerse AI</li>
+      <li>Luma AI</li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <aside>
+      <button onclick="mostrarIA('sora')">Sora</button>
+      <button onclick="mostrarIA('suno')">Suno AI</button>
+      <button onclick="mostrarIA('pixverse')">PixVerse AI</button>
+      <button onclick="mostrarIA('luma')">Luma AI</button>
+    </aside>
+
+    <main>
+      <section id="sora" class="info-ia">
+        <h2>Sora — OpenAI</h2>
+        <img class="ia-img" src="../src/img/sora.png" alt="Sora IA" />
+        <p><strong>¿Qué es?</strong> Sora es un modelo de <strong>generación de video mediante texto</strong> creado por OpenAI. Produce clips realistas y escenas cinematográficas completas a partir de texto.</p>
+        <ul>
+          <li>Generación de video 1080p.</li>
+          <li>Coherencia física avanzada.</li>
+          <li>Control narrativo por texto.</li>
+        </ul>
+        <a class="enlace" href="https://openai.com/sora" target="_blank"> Página oficial de Sora</a>
+      </section>
+
+      <section id="suno" class="info-ia" style="display:none;">
+        <h2>Suno AI — Música Generada por IA</h2>
+        <img class="ia-img" src="../src/img/suno.png" alt="Suno AI" />
+        <p>Suno AI crea música completa, con letra, voz e instrumentación solo con texto. Ideal para creadores y contenido digital.</p>
+        <ul>
+          <li>Generación de canciones completas.</li>
+          <li>Voces realistas.</li>
+          <li>Estilos musicales variados.</li>
+        </ul>
+        <a class="enlace" href="https://suno.com" target="_blank"> Probar Suno AI</a>
+      </section>
+
+      <section id="pixverse" class="info-ia" style="display:none;">
+        <h2>PixVerse AI — Video Creativo</h2>
+        <img class="ia-img" src="../src/img/pix.jpg" alt="PixVerse AI" />
+        <p>PixVerse genera videos a partir de texto o imágenes, ideal para creadores y animación rápida.</p>
+        <ul>
+          <li>Estilos visuales variados.</li>
+          <li>Animación de fotos.</li>
+          <li>Producción rápida.</li>
+        </ul>
+        <a class="enlace" href="https://pixverse.ai" target="_blank"> Ir a PixVerse</a>
+      </section>
+
+      <section id="luma" class="info-ia" style="display:none;">
+        <h2>Luma AI — Modelos 3D y NeRF</h2>
+        <img class="ia-img" src="../src/img/luma.webp" alt="Luma AI" />
+        <p>Luma AI transforma fotografías en modelos 3D realistas usando tecnología NeRF.</p>
+        <ul>
+          <li>Modelos 3D desde fotos.</li>
+          <li>Proyectos XR y VR.</li>
+          <li>Escenas volumétricas reales.</li>
+        </ul>
+        <a class="enlace" href="https://lumalabs.ai" target="_blank"> Visitar Luma AI</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    © 2025 - Catálogo de IAs Avanzadas
+  </footer>
+  <script>
+    function mostrarIA(id) {
+      const secciones = document.querySelectorAll('.info-ia');
+      secciones.forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    window.onload = () => mostrarIA('sora');
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+*{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        
+button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #4a5b6e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor:crosshair;
+        }
+
+#saludo {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+.caritas {
+            margin-top: 30px;
+           
+        }
+
+.temas {
+            margin-top: 30px;
+        }
+
+.arbol {
+            margin-top: 30px;
+        }
+
+.parrafos {
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+.arbol2 {
+            margin-top: 30px;
+            width: fit-content;
+        }
+
+.JavaScript {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        /**/
+.parrafo1{
+            color: yellow;
+            font-style: oblique;
+        }
+        .clase-coleccion{
+            color: red;
+            background-color: pink;
+            font-size: 18px;
+        }
+        

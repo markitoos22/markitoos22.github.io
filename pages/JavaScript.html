@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JavaScript</title>
+    <link rel="stylesheet" href="../css/JavaScript.css">
+</head>
+<body>
+
+    <h1>Ejercicio JavaScript</h1>
+    <p id="saludo"> Keloke mi loko </p>
+
+    <!--Cambiar el texto-->
+
+    <button type="button" onclick="document.getElementById('saludo').innerHTML = 'Hoy vamos a hacer ejercicios de JavaScript';"> Dale click brother 
+    </button> <br>
+
+<div class="caritas"> 
+
+    <!--Cambia la cara según el boton que pulses-->
+
+    <img id="Caritanormal" src="../src/img/normal.png" alt="Caritanormal" style="width:100px"> <br>
+
+    <button onclick="document.getElementById('Caritanormal').src='../src/img/feliz.png'">Carita feliz</button>
+    <button onclick="document.getElementById('Caritanormal').src='../src/img/triste.png'">Carita triste</button>
+    <button onclick="document.getElementById('Caritanormal').src='../src/img/normal.png'">Normal</button>
+
+    <!--Otra manera
+    <img class="tamaño" id="neutral" src="img/neutral.png"> <br>
+    <img class="tamaño" id="sonrie" src="img/sonriente.jpg" hidden>
+    <img class="tamaño" id="triste" src="img/triste.jpg" hidden>
+
+    <button onclick='document.getElementById("neutral").hidden = true; 
+                     document.getElementById("sonrie").hidden = false; 
+                     document.getElementById("triste").hidden = true;'> 
+                     Sonreir </button>
+
+    <button onclick='document.getElementById("neutral").hidden = true;
+                     document.getElementById("sonrie").hidden = true;
+                     document.getElementById("triste").hidden = false;'> 
+                     Triste </button>
+
+    <button onclick='document.getElementById("neutral").hidden = false;
+                     document.getElementById("sonrie").hidden = true;
+                     document.getElementById("triste").hidden = true;'> 
+                     Neutral </button> <br>
+    -->
+</div>
+
+<div class="temas"> 
+    <h2> Cambia el tema de la pagina </h2>
+
+    <!--Efecto día y noche-->
+
+    <button onclick="document.body.style.backgroundColor = 'white';
+                     document.body.style.color = 'black'">
+                        <img src="../src/img/sol.png" alt="sol" style="width:60px">
+    </button>
+
+    <button onclick="document.body.style.backgroundColor = 'grey';
+                     document.body.style.color = 'white'">
+                        <img src="../src/img/luna.png" alt="sol" style="width:60px">
+    </button>
+</div>
+
+<div class="arbol">
+    <img id="arbol" src="../src/img/arbol.jpeg" alt="árbol" style="width:150px"> <br>
+
+     <!--Hacer aparecer y desaparecer una imagen-->
+
+    <button onclick="
+    const arbol = document.getElementById('arbol');
+    arbol.hidden = !arbol.hidden; /* Alterna la visibilidad (true/false) */
+    this.innerHTML = arbol.hidden ? 'Mostrar árbol' : 'Quitar árbol'; /* Cambia el texto */
+    ">Quitar árbol</button>
+</div>
+
+<div class="arbol2">
+
+<!--En lugar de ocultar con hidden, quiero hacerlo con display-->
+
+    <img id="arbol2" src="../src/img/arbol2.avif" alt="árbol" style="width:150px"> <br>
+
+    <button onclick="document.getElementById('arbol2').style.display = 'none'">Quitar árbol</button>
+    <button onclick="document.getElementById('arbol2').style.display = 'block'">Mostrar árbol</button> 
+</div>
+
+
+<div class="parrafos">
+    <p class="parrafo1">
+    El DOM (Document Object Model, Modelo de Objetos del Documento) es una interfaz de programación que representa el contenido de una página web (HTML o XML) como una estructura de árbol de objetos.
+    </p>
+    <p>
+    JavaScript es un lenguaje de programación que se utiliza principalmente para crear páginas web dinámicas e interactivas.
+    </p>
+
+    <p class="JavaScript">
+    Con JavaScript, podrías manipular este documento a través del DOM de la siguiente manera: <br>
+    javascript <br>
+    // Acceder al elemento con el id "titulo" <br> 
+    const tituloElemento = document.getElementById('titulo'); <br>
+
+    // Modificar el contenido del elemento <br>
+    tituloElemento.textContent = '¡Hola, desde JavaScript!'; <br>
+
+    // Crear un nuevo párrafo <br>
+    const nuevoParrafo = document.createElement('p'); <br>
+    nuevoParrafo.textContent = 'Este párrafo ha sido añadido con JavaScript.'; <br>
+
+    // Añadir el nuevo párrafo al cuerpo del documento <br>
+    document.body.appendChild(nuevoParrafo); <br>
+    Usa el código con precaución. <br>
+
+    Este código permite modificar el contenido del &lt;h1&gt; y añadir un nuevo &lt;p&gt; sin necesidad de recargar la página, haciendo que el sitio web sea interactivo y dinámico.
+    </p>
+
+    <!--getElementsByTagName: devuelve una colección de elementos, accederé a cada elemento en función de su posición-->  
+
+    <button onclick="
+
+    /*  
+        document.getElementsByTagName('p')[0].style.color = 'green';
+        document.getElementsByTagName('p')[0].style.fontSize = '20px';
+        document.getElementsByTagName('p')[0].style.fontWeight = 'bold'; negrita, CSS:font-weight: bold;
+        document.getElementsByTagName('p')[0].style.fontStyle = 'italic'; cursiva, CSS:font-style: italic; 
+    */
+
+         /*declaro la constrante parrafo0*/
+        const parrafo0 = document.getElementsByTagName('p')[0];
+        parrafo0.style.color = 'green';
+        parrafo0.style.fontSize = '20px';
+        parrafo0.style.fontWeight = 'bold';
+        parrafo0.style.fontStyle = 'italic';
+
+       /*aplicar estilos con una clase, aplica una clase eliminano las clases anteriores
+        document.getElementsByTagName('p')[1].className='clase-coleccion';*/
+
+        document.getElementsByTagName('p')[1].classList.add('clase-coleccion'); 
+        "> Cambia el aspecto del primer párrafo </button>
+             
+
+    <button onclick="cambiarEstilosGlobales()">Cambia el aspecto de todos los párrafos</button>
+
+    <script>
+    function cambiarEstilosGlobales() {
+    // Selecciona TODOS los elementos <p> y los guarda en una lista (NodeList)
+    const parrafos = document.querySelectorAll('p');
+
+    // Itera sobre cada elemento individualmente para aplicar los estilos
+    parrafos.forEach(parrafo => {
+        parrafo.style.color = 'blue';
+        parrafo.style.fontSize = '15px';
+        parrafo.style.fontWeight = 'bold';
+        parrafo.style.fontStyle = 'italic'; 
+    });
+    }
+    </script>   
+    
+        
+</div>
+</body>
+</html>
