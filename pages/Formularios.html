@@ -51,27 +51,35 @@
             <label for="telefono"> Teléfono: </label>
             <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
             <br><br>
-        </div>
-        <div class="Edad">
-            <label class="titulo"> Edad: </label>
-            <label for="menor"> Menor de 18 </label>
-            <input type="radio" id="menor" name="edad" value="menor">
-            <label for="adulto"> 18 o mayor </label>
-            <input type="radio" id="adulto" name="edad" value="adulto">
+            <label for="direccion"> Dirección: </label>
+            <input type="text" id="direccion" name="direccion">
+            <br><br>
+            <label for="codigo"> Código Postal: </label>
+            <input type="text" id="codigo" name="codigo" pattern="[0-9]{9}">
+            <br><br>
+        </div>  
+        <div class="Interes">
+            <label class="titulo"> Intereses </label>
+            <input type="checkbox" id="deportes" name="intereses" value="deportes">
+            <label for="deportes"> Deportes </label>
+            <input type="checkbox" id="musica" name="intereses" value="musica">
+            <label for="musica">    Música </label>
+            <input type="checkbox" id="tecnologia" name="intereses" value="tecnologia">
+            <label for="tecnologia"> Tecnología </label>
+            <input type="checkbox" id="arte" name="intereses" value="arte">
+            <label for="arte"> Arte </label>
+            <br><br>
+            <label for="comentarios"> ¿Cómo se enteró de nosotros? </label>
+            <select id="comentarios" name="comentarios">
+                <option value="amigos"> Amigos </option>
+                <option value="redes"> Redes Sociales </option>
+                <option value="publicidad"> Publicidad </option>
+                <option value="otros"> Otros </option>
+            </select>
             <br><br>
         </div>
-        <div class="Interes">
-            <label class="titulo"> Intereses: </label>
-            <label for="deportes"> Deportes </label>
-            <input type="checkbox" id="deportes" name="intereses" value="deportes"> 
-            <label for="musica"> Música </label>
-            <input type="checkbox" id="musica" name="intereses" value="musica">
-            <label for="tecnologia"> Tecnología </label>
-            <input type="checkbox" id="tecnologia" name="intereses" value="tecnologia">
-            <br>
-        </div>
         <div class="Comentarios">
-        <label for="comentarios" class="titulo"> Comentarios: </label>
+        <label for="comentarios" class="titulo"> Comentarios </label>
         <input type="textarea" id="comentarios" name="comentarios" rows="4" cols="50">
         <br><br>
         </div>
