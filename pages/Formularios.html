@@ -14,13 +14,13 @@
     <header>
     <h1> Formulario de Registro </h1>
     </header>
-    <form action="/submit" method="post">
+    <form action="/submit" method="post" id="Contacto">
         <div class="Personal">
-            <label class="titulo"> Información Personal </label>
+            <legend class="legend"> Información Personal </legend>
             <br><br>
             <label for="nombre"> Nombre: </label>
             <input type="text" id="nombre" name="nombre" required>
-            <br><br>
+            <br><br>    
 
             <label for="email"> Correo Electrónico: </label>
             <input type="email" id="email" name="email" required>
@@ -39,10 +39,22 @@
             <label for="pais"> País: </label>
             <select id="pais" name="pais">
                 <option value="espana"> España </option>
+                <option value="francia"> Francia </option>
+                <option value="alemania"> Alemania </option>
+                <option value="italia"> Italia </option>
+                <option value="reino_unido"> Reino Unido </option>
+                <option value="estados_unidos"> Estados Unidos </option>
+                <option value="canada"> Canadá </option>
+                <option value="japon"> Japón </option>
+                <option value="china"> China </option>
+                <option value="rusia"> Rusia </option>
+                <option value="brasil"> Brasil </option>
+                <option value="india"> India </option>
+                <option value="australia"> Australia </option>
                 <option value="mexico"> México </option>
                 <option value="argentina"> Argentina </option>
                 <option value="colombia"> Colombia </option>
-                <option value="chile"> Chile </option>
+                <option value="otro"> Otro </option>
             </select>
             <br><br>
             <label for="fecha"> Fecha de Nacimiento: </label>
@@ -59,7 +71,7 @@
             <br><br>
         </div>  
         <div class="Interes">
-            <label class="titulo"> Intereses </label>
+            <legend class="legend"> Información Personal </legend>
             <input type="checkbox" id="deportes" name="intereses" value="deportes">
             <label for="deportes"> Deportes </label>
             <input type="checkbox" id="musica" name="intereses" value="musica">
@@ -79,7 +91,7 @@
             <br><br>
         </div>
         <div class="Comentarios">
-        <label for="comentarios" class="titulo"> Comentarios </label>
+        <legend class="legend"> Información Personal </legend>
         <input type="textarea" id="comentarios" name="comentarios" rows="4" cols="50">
         <br><br>
         </div>
@@ -87,5 +99,16 @@
         <label for="reset"> <input type="reset" id="reset" value="Borrar"> </label>
 
     </form>
+
+    <button class="button" type="button" onclick="window.alert('Hola buenos dias')"> Saludo </button> <br> 
+    <button class="button" type="button" onclick="document.write('Holaa')"> No usar </button> <br>
+
+    <script>
+    const form = document.getElementById('Contacto');
+    const nombreInput = document.getElementById('nombre');
+    </script>
+    <button class="button" type="button" onclick="window.alert(nombreInput)"> Algo </button>
+    <p>
+    </p>
 </body>
 </html>
